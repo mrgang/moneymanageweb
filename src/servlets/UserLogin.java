@@ -20,6 +20,7 @@ public class UserLogin extends HttpServlet {
             , HttpServletResponse resp) throws ServletException, IOException {
         resp.setHeader("Pragma", "no-cache");
         resp.setHeader("cache-control", "no-cache");
+        req.setCharacterEncoding("UTF-8");
         String userName = req.getParameter("userName");
         String password = req.getParameter("password");
         PrintWriter out = resp.getWriter();

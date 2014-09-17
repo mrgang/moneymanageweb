@@ -18,6 +18,7 @@ public class UserGetHistoryB extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setCharacterEncoding("UTF-8");
+        req.setCharacterEncoding("UTF-8");
         String kk = req.getParameter("userName");
         String res = SqlHelpers.sqlGetHistory(kk);
         PrintWriter out = resp.getWriter();
